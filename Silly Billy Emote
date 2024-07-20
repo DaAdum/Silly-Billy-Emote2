@@ -1,0 +1,12 @@
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+mouse.KeyDown:Connect(function(key)
+	if key == 'e' then
+		local animation = Instance.new("Animation")
+		animation.AnimationId = "rbxassetid://18562671120"
+		local anim = player.Character.Humanoid:LoadAnimation(animation)
+		anim.Priority = Enum.AnimationPriority.Action
+		anim:Play()
+	end
+end)
